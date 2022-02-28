@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Number Generator App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/3f43e11179.js" crossorigin="anonymous"></script>
+    <style>
+
+      .animate-spin{
+        animation: spin 1s linear infinite;
+
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="container text-center mx-auto flex justify-center items-center h-screen">
+        <div class="p-2 shadow-lg shadow-orange-300 text-white w-96 border rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500">
+        <h1 class="text-2xl">Random Number & Colour Generator</h1>
+      <div class="mt-2 mb-1 ">
+        <span class="num text-4xl border-solid border-2 border-orange-500 px-2">0</span>
+      </div> 
+      <hr>
+      <div id="buttons">
+        
+        <button id="new-color" class="inline-flex items-center font-semibold leading-6 text-sm shadow rounded-md transition ease-in-out duration-150 hover:bg-gray-600 hover:text-white bg-gray-200 text-black border rounded-lg p-2 m-2 ring  focus:ring-offset-2 focus:ring-offset-orange-500">
+          <!-- <i class="fas fa-spinner"></i> -->
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          New Number ...
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>
